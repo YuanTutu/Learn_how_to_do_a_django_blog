@@ -1,0 +1,27 @@
+Watching for file changes with StatReloader
+"GET /article/article-list/ HTTP/1.1" 200 14217
+Watching for file changes with StatReloader
+Not Found: /article/article-detail/9999/
+"GET /article/article-detail/9999/ HTTP/1.1" 404 1780
+D:\00workspace\07Blog\my_blog\my_blog\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\00workspace\07Blog\my_blog\article\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /article/article-detail/9/
+Traceback (most recent call last):
+  File "D:\00workspace\07Blog\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\00workspace\07Blog\env\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\00workspace\07Blog\env\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\00workspace\07Blog\my_blog\article\views.py", line 86, in article_detail
+    article = ArticlePost.objects.get(id=id)
+  File "D:\00workspace\07Blog\env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\00workspace\07Blog\env\lib\site-packages\django\db\models\query.py", line 406, in get
+    raise self.model.DoesNotExist(
+article.models.ArticlePost.DoesNotExist: ArticlePost matching query does not exist.
+"GET /article/article-detail/9/ HTTP/1.1" 500 82135
+D:\00workspace\07Blog\my_blog\article\views.py changed, reloading.
+Watching for file changes with StatReloader
